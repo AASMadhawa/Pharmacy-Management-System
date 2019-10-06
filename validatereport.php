@@ -44,7 +44,7 @@ if (isset($_GET['edit'])){
     $id = $_GET['edit'];
     $update = true;
     $result = $mysqli->query("SELECT * FROM report WHERE id = $id") or die($mysqli->error());
-    if (count($result)==1){
+    if (count($result)){
         $row = $result->fetch_array();
         $reportid = $row['reportid'];
         $supplireid = $row['supplireid'];
